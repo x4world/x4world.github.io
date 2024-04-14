@@ -1,0 +1,10 @@
+{
+	"name": "np-dbc",
+	"displayName": "DBC Editor",
+	"version": "1.0.0",
+	"description": "DBC Editor",
+	"author": "nodeplus",
+	"keywords": [
+		"dbc"
+	]
+}
