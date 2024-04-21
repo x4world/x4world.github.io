@@ -1,0 +1,936 @@
+VERSION ""
+
+
+NS_ :
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: BCM GW_BD PDCM RCM PS DDCM
+
+
+VAL_TABLE_ IC_FindCar 7 "Off" 3 "90s
+" 2 "60s
+" 1 "30s
+" 0 "None" ;
+VAL_TABLE_ IC_FollowMeHome 7 "Off" 3 "90s
+" 2 "60s
+" 1 "30s
+" 0 "None" ;
+VAL_TABLE_ IC_WiperSwDelayed2 3 "7s" 2 "5s
+" 1 "3s
+" 0 "None" ;
+VAL_TABLE_ IC_WiperSwDelayed1 3 "9s" 2 "7s
+" 1 "5s
+" 0 "None" ;
+VAL_TABLE_ MMI_FindCar 7 "Off" 3 "90s
+" 2 "60s
+" 1 "30s
+" 0 "None" ;
+VAL_TABLE_ MMI_FollowMeHome 7 "Off" 3 "90s
+" 2 "60s
+" 1 "30s
+" 0 "None" ;
+VAL_TABLE_ MMI_WiperSwDelayed2 3 "7s" 2 "5s
+" 1 "3s
+" 0 "None" ;
+VAL_TABLE_ MMI_WiperSwDelayed1 3 "9s" 2 "7s
+" 1 "5s
+" 0 "None" ;
+VAL_TABLE_ DFMS_EyesClosedAlarm 1 "Warning" 0 "No Warning" ;
+VAL_TABLE_ DFMS_DimissionAlarm 1 "Warning" 0 "No Warning" ;
+VAL_TABLE_ DFMS_SmokingAlarm 1 "Warning" 0 "No Warning" ;
+VAL_TABLE_ DFMS_CallPhoneAlarm 1 "Warning" 0 "No Warning" ;
+VAL_TABLE_ DFMS_DistractionAlarm 1 "Warning" 0 "No Warning" ;
+VAL_TABLE_ DFMS_YawnedAlarm 1 "Warning" 0 "No Warning" ;
+VAL_TABLE_ FLR_Advanced_emergency_braking 15 "not available / not installed" 14 "error indication" 7 "emergency braking active" 6 "collision warning with braking" 5 "collision warning active" 4 "driver overrides system" 3 "system is ready" 2 "system deactivated by driver" 1 "system temporarily not available" 0 "system is not ready" ;
+VAL_TABLE_ PDCM_PassReadingLampSw 1 "ON" 0 "OFF" ;
+VAL_TABLE_ PDCM_DoorSt 1 "Open" 0 "Closed" ;
+VAL_TABLE_ DDCM_Anti_thief_Warning 1 "Warning" 0 "No Warning" ;
+VAL_TABLE_ DDCM_SearchCar 1 "Search" 0 "None" ;
+VAL_TABLE_ DDCM_LockLamp 2 "Unlock Lamp" 1 "Lock Lamp" 0 "None" ;
+VAL_TABLE_ DDCM_RKECommand 3 "Reserved" 2 "Unlock Press  (遥控解锁)
+" 1 "Lock Press  (遥控闭锁)
+" 0 "None" ;
+VAL_TABLE_ DDCM_DoorSt 1 "Open" 0 "Closed" ;
+VAL_TABLE_ RCM_TrailerCheckStatus 1 "Trailer" 0 "No Trailer
+" ;
+VAL_TABLE_ RCM_Anti_theftWarn 1 "Warning" 0 "No Warning
+" ;
+VAL_TABLE_ RCM_AuxiliaryFuelLevelSt 255 "Not Available" 34 "阻值过高故障
+" 33 "阻值过低故障
+" 17 "180" 16 "170" 15 "160" 14 "150" 13 "140" 12 "130" 11 "120" 10 "110" 9 "100" 8 "88.75
+" 7 "77.5
+" 6 "66.25
+" 5 "55" 4 "47.35
+" 3 "32.5
+" 2 "21.25
+" 1 "10" 0 "Initial" ;
+VAL_TABLE_ RCM_MainFuelLevelSt 255 "Not Available" 34 "阻值过高故障" 33 "阻值过低故障
+" 17 "180" 16 "170" 15 "160" 14 "150" 13 "140" 12 "130" 11 "120" 10 "110" 9 "100" 8 "88.75
+" 7 "77.5
+" 6 "66.25
+" 5 "55" 4 "47.35
+" 3 "32.5
+" 2 "21.25
+" 1 "10" 0 "Initial" ;
+VAL_TABLE_ RCM_RRTurnLampSt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_TABLE_ RCM_RLTurnLampSt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_TABLE_ RCM_TrailerRTurnLampSt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_TABLE_ RCM_TrailerLTurnLampSt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_TABLE_ PS_RKECommand 15 "Reserved" 14 "Reserved" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "Reserved" 6 "WindowStop（车窗停止运动)
+" 5 "WindowDown（遥控降窗)
+" 4 "WindowUp  (遥控升窗)
+" 3 "Search Press  (远程寻车)" 2 "Unlock Press  (遥控解锁)
+" 1 "Lock Press  (遥控闭锁)
+" 0 "None" ;
+VAL_TABLE_ PS_KeyOutsideWarning 1 "Warning" 0 "No Warning" ;
+VAL_TABLE_ PS_PowerMode 4 "START" 3 "ON" 2 "ACC" 1 "OFF" 0 "None" ;
+VAL_TABLE_ BCM_ACC_Usage_Demand 3 "Not Available" 2 "Error Indicator" 1 "using ACC distance control
+" 0 "not using ACC distance control" ;
+VAL_TABLE_ BCM_Requested_ACC_Distance_Mode 7 "Not Available" 6 "Error Indicator" 5 "Not Defined
+" 4 "Requested ACC Distance Mode #5
+" 3 "Requested ACC Distance Mode #4
+" 2 "Requested ACC Distance Mode #3
+" 1 "Requested ACC Distance Mode #2
+" 0 "Requested ACC Distance Mode #1
+" ;
+VAL_TABLE_ BCM_KL30St 1 "Valid" 0 "Invalid" ;
+VAL_TABLE_ BCM_RearPositionLampCmd 1 "on" 0 "off" ;
+VAL_TABLE_ BCM_FindCar 7 "Off" 3 "90s
+" 2 "60s
+" 1 "30s
+" 0 "None" ;
+VAL_TABLE_ BCM_FollowMeHome 7 "Off" 3 "90s
+" 2 "60s
+" 1 "30s
+" 0 "None" ;
+VAL_TABLE_ BCM_High_WiperRelaySt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_Low_WiperRelaySt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_WashmotorSt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_SunroofMotorSt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_AirHornSolenoidvalveSt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_KlaxonRelaySt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_LowVoltageProtectiveRelaySt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_WiperSwDelayed2 3 "7s" 2 "5s" 1 "3s（默认值）
+" 0 "None" ;
+VAL_TABLE_ BCM_WiperSwDelayed1 3 "9s" 2 "7s
+" 1 "5s（默认值）" 0 "None" ;
+VAL_TABLE_ BCM_Sleeper_SRMSw 3 "Reserved" 2 "Close" 1 "Open" 0 "Inactive" ;
+VAL_TABLE_ BCM_FloodlightSw 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_RemoteSpeedPedalEnable 3 "not available" 2 "not available
+" 1 "active" 0 "Inactive" ;
+VAL_TABLE_ BCM_PassReadingLampSw 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_DriverReadingLampSw 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_RightDayLineLamp 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_ToolboxLampSw 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_FuelTankChangeSw 1 "Auxiliary FuelTank" 0 "Main FuelTank" ;
+VAL_TABLE_ BCM_Sleeper_KeyOffLampSwitch 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_SleepLampSwitch 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_RLS_WiperCMD 3 "Reserved" 2 "High" 1 "Low" 0 "None" ;
+VAL_TABLE_ BCM_WithDoorSwitch 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_FlashLampSwitch 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_RLS_LampSwitch 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_WasherSwitch 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_HornSwitch 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_ParkingPTOSwitch 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_DrivingPTOSwitch 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_AxleDifferentialLockSwitch 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_WheelDifferentialLockSwitch 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_Brake_Switch 3 "Not Available" 2 "Error" 1 "Brake pedal depressed
+" 0 "Brake pedal released" ;
+VAL_TABLE_ BCM_Clutch_Switch 3 "Clutch switch status" 2 "Error" 1 "Clutch actuated" 0 "Clutch  not actuated
+" ;
+VAL_TABLE_ BCM_RTurnLampFlash 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_LTurnLampFlash 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_RFrontFogLampSt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_LFrontFogLampSt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_HighBeamSt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_LowBeamSt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_FrontPositionLampSt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_FRTurnLampSt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_FLTurnLampSt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_RearFogLampSw 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_FrontFogLampSw 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_FlashLampSw 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_WorkLampSw 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_HeadLamp_AUTO 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_PositionLampSw 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_WiperParkSw 1 "Invalid" 0 "Valid" ;
+VAL_TABLE_ BCM_RLSFault 1 "Fault" 0 "No Fault" ;
+VAL_TABLE_ BCM_LeftDayLineLamp 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_Cab_SRMSw 3 "Reserved" 2 "Close" 1 "Open" 0 "Inactive" ;
+VAL_TABLE_ BCM_HornSelectorSwitch 1 "气喇叭" 0 "电喇叭" ;
+VAL_TABLE_ BCM_PowerMode 4 "START" 3 "ON" 2 "ACC" 1 "OFF" 0 "None" ;
+VAL_TABLE_ BCM_WiperSw 15 "Not available" 5 "Delayed2
+" 4 "Delayed1
+" 3 "High" 2 "Reserved" 1 "Low" 0 "Off" ;
+VAL_TABLE_ BCM_Low_BeamSwitch 3 "Not available" 2 "Error" 1 "Low Beam active" 0 "Low Beam inactive" ;
+VAL_TABLE_ BCM_TurnSignalSwitch 15 "Not available" 14 "Error" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "Reserved" 3 "Reserved" 2 "Right turn to be Flashing" 1 "Left Turn to be Flashing" 0 "No Turn being signaled" ;
+VAL_TABLE_ BCM_HazardLightSwitch 3 "Not available" 2 "Error" 1 "Hazard Lamps to be Flashing
+" 0 "Hazard Lamps to be Off" ;
+VAL_TABLE_ BCM_High_BeamSwitch 3 "Not available" 2 "Error" 1 "High Beam active" 0 "High Beam inactive" ;
+VAL_TABLE_ BCM_LDW_Switch 3 "Not care" 2 "Error" 1 "Enable Lane Departure Warning" 0 "Disable Lane Departure Warning" ;
+VAL_TABLE_ BCM_AEBS_Switch 3 "Not care" 2 "Error
+" 1 "not deactivation of system" 0 "deactivation of system" ;
+
+
+BO_ 2564432378 Diag: 8 Vector__XXX
+
+BO_ 2566912242 MMI_8: 8 GW_BD
+ SG_ MMI_VOICE_SeatrVentilation : 53|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ MMI_VOICE_SeatrHeat : 40|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ MMI_VOICE_Cab_SRMSw : 38|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ MMI_VOICE_Washmotor : 26|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ MMI_VOICE_WiperSw : 29|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ MMI_VOICE_Sleeper_KeyOffLamp : 16|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ MMI_VOICE_Floodlight : 18|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ MMI_VOICE_DriverReadingLamp : 20|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ MMI_VOICE_SleepLamp : 22|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ MMI_VOICE_FRTurnLamp : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ MMI_VOICE_FLTurnLamp : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ MMI_VOICE_RearFogLamp : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ MMI_VOICE_FrontFogLamp : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ MMI_VOICE_High_Beam : 2|2@1+ (1,0) [1|3] "" Vector__XXX
+ SG_ MMI_VOICE_Low_Beam : 4|2@1+ (1,0) [1|3] "" Vector__XXX
+ SG_ MMI_VOICE_PositionLamp : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566889509 GW_BD_NM: 8 GW_BD
+ SG_ GW_BD_NMUserData : 16|48@1+ (1,0) [0|281474976710655] "" Vector__XXX
+ SG_ GW_BD_NMAlive : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ GW_BD_NMRing : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ GW_BD_NMLimphome : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ GW_BD_NMSleepInd : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ GW_BD_NMSleepAck : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ GW_BD_NMDestAddr : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566840343 IC_VD: 8 GW_BD
+ SG_ IC_Vehicle_Distance : 32|32@1+ (0.125,0) [0|526385151.9] "km" Vector__XXX
+
+BO_ 2566876183 IC_1: 8 GW_BD
+ SG_ IC_FindCar : 18|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ IC_FollowMeHome : 21|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ IC_WiperSwDelayed2 : 0|2@1+ (1,0) [0|3] "s" Vector__XXX
+ SG_ IC_WiperSwDelayed1 : 2|2@1+ (1,0) [0|3] "s" Vector__XXX
+
+BO_ 2365484270 IC_TCO1: 8 GW_BD
+ SG_ IC_Tachograph_Vehicle_Speed : 48|16@1+ (0.00390625,0) [0|250.996] "Km/h" Vector__XXX
+
+BO_ 2566876402 MMI_3: 8 GW_BD
+ SG_ MMI_FindCar : 18|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ MMI_FollowMeHome : 21|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ MMI_WiperSwDelayed2 : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ MMI_WiperSwDelayed1 : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566877415 DFMS_1: 8 GW_BD
+ SG_ DFMS_EyesClosedAlarm : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DFMS_DimissionAlarm : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DFMS_SmokingAlarm : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DFMS_CallPhoneAlarm : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DFMS_DistractionAlarm : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DFMS_YawnedAlarm : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2364550954 FLR_AEBS1: 8 GW_BD
+ SG_ FLR_Advanced_emergency_braking : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2364539904 EMS_EEC1: 8 GW_BD
+ SG_ EMS_Engine_Speed : 24|16@1+ (0.125,0) [0|8031.875] "rpm" Vector__XXX
+
+BO_ 2566889709 PDCM_NM: 8 PDCM
+ SG_ PDCM_NMUserData : 16|48@1+ (1,0) [0|281474976710655] "" Vector__XXX
+ SG_ PDCM_NMAlive : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PDCM_NMRing : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PDCM_NMLimphome : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PDCM_NMSleepInd : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PDCM_NMSleepAck : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PDCM_NMDestAddr : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566849261 PDCM_1: 8 PDCM
+ SG_ PDCM_PassReadingLampSw : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PDCM_DoorSt : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2566889708 DDCM_NM: 8 DDCM
+ SG_ DDCM_NMUserData : 16|48@1+ (1,0) [0|281474976710655] "" Vector__XXX
+ SG_ DDCM_NMAlive : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DDCM_NMRing : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DDCM_NMLimphome : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DDCM_NMSleepInd : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DDCM_NMSleepAck : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DDCM_NMDestAddr : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566849004 DDCM_1: 8 DDCM
+ SG_ DDCM_Anti_thief_Warning : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DDCM_SearchCar : 25|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DDCM_LockLamp : 26|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DDCM_RKECommand : 28|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DDCM_DoorSt : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2566889506 RCM_NM: 8 RCM
+ SG_ RCM_NMUserData : 16|48@1+ (1,0) [0|281474976710655] "" Vector__XXX
+ SG_ RCM_NMAlive : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RCM_NMRing : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RCM_NMLimphome : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RCM_NMSleepInd : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RCM_NMSleepAck : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RCM_NMDestAddr : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566835490 RCM_1: 8 RCM
+ SG_ RCM_TrailerCheckStatus : 34|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RCM_Anti_theftWarn : 35|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RCM_AuxiliaryFuelLevelSt : 24|8@1+ (1,0) [0|255] "Ω" Vector__XXX
+ SG_ RCM_MainFuelLevelSt : 16|8@1+ (1,0) [0|255] "Ω" Vector__XXX
+ SG_ RCM_RRTurnLampSt : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RCM_RLTurnLampSt : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RCM_TrailerRTurnLampSt : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RCM_TrailerLTurnLampSt : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566889501 PS_NM: 8 PS
+ SG_ PS_NMUserData : 16|48@1+ (1,0) [0|281474976710655] "" Vector__XXX
+ SG_ PS_NMAlive : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PS_NMRing : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PS_NMLimphome : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PS_NMSleepInd : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PS_NMSleepAck : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PS_NMDestAddr : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566901277 PS_1: 8 PS
+ SG_ PS_RKECommand : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ PS_KeyOutsideWarning : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PS_PowerMode : 5|3@1+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 2566889505 BCM_NM: 8 Vector__XXX
+ SG_ BCM_NMUserData : 16|48@1+ (1,0) [0|281474976710655] "" Vector__XXX
+ SG_ BCM_NMAlive : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_NMRing : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_NMLimphome : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_NMSleepInd : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_NMSleepAck : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_NMDestAddr : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566803745 BCM_ACC2: 8 Vector__XXX
+ SG_ BCM_ACC_Usage_Demand : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BCM_Requested_ACC_Distance_Mode : 5|3@1+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 2566905121 BCM_2: 8 Vector__XXX
+ SG_ BCM_BatVtg3 : 56|8@1+ (0.2,0) [0|40] "V" Vector__XXX
+ SG_ BCM_BatVtg2 : 48|8@1+ (0.2,0) [0|40] "V" Vector__XXX
+ SG_ BCM_BatVtg1 : 40|8@1+ (0.2,0) [0|40] "V" Vector__XXX
+ SG_ BCM_KL30St : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_RearPositionLampCmd : 24|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_FindCar : 26|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ BCM_FollowMeHome : 29|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ BCM_High_WiperRelaySt : 16|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BCM_Low_WiperRelaySt : 18|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BCM_WashmotorSt : 20|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BCM_SunroofMotorSt : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BCM_AirHornSolenoidvalveSt : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BCM_KlaxonRelaySt : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BCM_LowVoltageProtectiveRelaySt : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BCM_WiperSwDelayed2 : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BCM_WiperSwDelayed1 : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566901025 BCM_1: 8 Vector__XXX
+ SG_ BCM_KeyInSW : 44|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_Sleeper_SRMSw : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BCM_FloodlightSw : 58|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_RemoteSpeedPedalEnable : 60|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BCM_PassReadingLampSw : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_DriverReadingLampSw : 63|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_RightDayLineLamp : 48|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BCM_ToolboxLampSw : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_FuelTankChangeSw : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_Sleeper_KeyOffLampSwitch : 53|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_SleepLampSwitch : 54|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_RLS_WiperCMD : 40|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BCM_WithDoorSwitch : 42|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_RLS_LampSwitch : 45|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_WasherSwitch : 46|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_HornSwitch : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_ParkingPTOSwitch : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_DrivingPTOSwitch : 33|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_AxleDifferentialLockSwitch : 34|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_WheelDifferentialLockSwitch : 35|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_Brake_Switch : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BCM_Clutch_Switch : 38|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BCM_RTurnLampFlash : 24|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_LTurnLampFlash : 25|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_RFrontFogLampSt : 26|2@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_LFrontFogLampSt : 28|2@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_HighBeamSt : 30|2@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_LowBeamSt : 16|2@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_FrontPositionLampSt : 18|2@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_FRTurnLampSt : 20|2@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_FLTurnLampSt : 22|2@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_RearFogLampSw : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_FrontFogLampSw : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_FlashLampSw : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_WorkLampSw : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_HeadLamp_AUTO : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_PositionLampSw : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_WiperParkSw : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_LeftDayLineLamp : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BCM_Cab_SRMSw : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BCM_HornSelectorSwitch : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_PowerMode : 5|3@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BCM_RLSFault : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2566769953 BCM_WiperSw: 8 Vector__XXX
+ SG_ BCM_WiperSw : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2365443105 BCM_LampSw: 8 Vector__XXX
+ SG_ BCM_Low_BeamSwitch : 62|2@1+ (1,0) [1|3] "" Vector__XXX
+ SG_ BCM_OperatorsDesiredBacklight : 16|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ BCM_TurnSignalSwitch : 8|4@1+ (1,0) [1|15] "" Vector__XXX
+ SG_ BCM_HazardLightSwitch : 12|2@1+ (1,0) [1|3] "" Vector__XXX
+ SG_ BCM_High_BeamSwitch : 14|2@1+ (1,0) [1|3] "" Vector__XXX
+
+BO_ 2561271841 BCM_LDWSw: 8 Vector__XXX
+ SG_ BCM_LDW_Switch : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2349541921 BCM_AEBSSw: 8 Vector__XXX
+ SG_ BCM_AEBS_checksum : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ BCM_AEBS_counter : 56|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ BCM_AEBS_Switch : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+
+
+CM_ SG_ 2566889509 GW_BD_NMUserData "OSEK NM user data
+";
+CM_ SG_ 2566889509 GW_BD_NMAlive "OSEK NM Alive
+";
+CM_ SG_ 2566889509 GW_BD_NMRing "OSEK NM Ring
+";
+CM_ SG_ 2566889509 GW_BD_NMLimphome "OSEK NM Limphome
+";
+CM_ SG_ 2566889509 GW_BD_NMSleepInd "OSEK NM Sleep Indication
+";
+CM_ SG_ 2566889509 GW_BD_NMSleepAck "OSEK NM Sleep Acknowledge
+";
+CM_ SG_ 2566889509 GW_BD_NMDestAddr "OSEK NM destination address
+";
+CM_ SG_ 2566840343 IC_Vehicle_Distance "总行驶里程
+";
+CM_ SG_ 2566876183 IC_FindCar "寻车照明时间反馈
+";
+CM_ SG_ 2566876183 IC_FollowMeHome "伴我回家时间反馈
+";
+CM_ SG_ 2566876183 IC_WiperSwDelayed2 "雨刮间歇二档
+";
+CM_ SG_ 2566876183 IC_WiperSwDelayed1 "雨刮间歇一档
+";
+CM_ SG_ 2365484270 IC_Tachograph_Vehicle_Speed "车速
+";
+CM_ SG_ 2566876402 MMI_FindCar "寻车照明时间反馈
+";
+CM_ SG_ 2566876402 MMI_FollowMeHome "伴我回家时间反馈
+";
+CM_ SG_ 2566876402 MMI_WiperSwDelayed2 "雨刮间歇二档
+";
+CM_ SG_ 2566876402 MMI_WiperSwDelayed1 "雨刮间歇一档
+";
+CM_ SG_ 2566877415 DFMS_EyesClosedAlarm "闭眼检测
+";
+CM_ SG_ 2566877415 DFMS_DimissionAlarm "离岗报警
+";
+CM_ SG_ 2566877415 DFMS_SmokingAlarm "吸烟检测
+";
+CM_ SG_ 2566877415 DFMS_CallPhoneAlarm "打手机检测
+";
+CM_ SG_ 2566877415 DFMS_DistractionAlarm "注意力分散检测
+";
+CM_ SG_ 2566877415 DFMS_YawnedAlarm "打哈欠检测
+";
+CM_ BO_ 2364550954 "Advanced Emergency Braking System
+";
+CM_ SG_ 2364539904 EMS_Engine_Speed "发动机转速
+";
+CM_ SG_ 2566889709 PDCM_NMUserData "OSEK NM user data
+";
+CM_ SG_ 2566889709 PDCM_NMAlive "OSEK NM Alive
+";
+CM_ SG_ 2566889709 PDCM_NMRing "OSEK NM Ring
+";
+CM_ SG_ 2566889709 PDCM_NMLimphome "OSEK NM Limphome
+";
+CM_ SG_ 2566889709 PDCM_NMSleepInd "OSEK NM Sleep Indication
+";
+CM_ SG_ 2566889709 PDCM_NMSleepAck "OSEK NM Sleep Acknowledge
+";
+CM_ SG_ 2566889709 PDCM_NMDestAddr "OSEK NM destination address
+";
+CM_ SG_ 2566849261 PDCM_PassReadingLampSw "副驾侧阅读灯开关指令
+";
+CM_ SG_ 2566849261 PDCM_DoorSt "副驾侧门状态信号
+";
+CM_ SG_ 2566889708 DDCM_NMUserData "OSEK NM user data
+";
+CM_ SG_ 2566889708 DDCM_NMAlive "OSEK NM Alive
+";
+CM_ SG_ 2566889708 DDCM_NMRing "OSEK NM Ring
+";
+CM_ SG_ 2566889708 DDCM_NMLimphome "OSEK NM Limphome
+";
+CM_ SG_ 2566889708 DDCM_NMSleepInd "OSEK NM Sleep Indication
+";
+CM_ SG_ 2566889708 DDCM_NMSleepAck "OSEK NM Sleep Acknowledge
+";
+CM_ SG_ 2566889708 DDCM_NMDestAddr "OSEK NM destination address
+";
+CM_ SG_ 2566849004 DDCM_Anti_thief_Warning "车身设防报警
+";
+CM_ SG_ 2566849004 DDCM_SearchCar "寻车
+";
+CM_ SG_ 2566849004 DDCM_LockLamp "解锁/闭锁成功亮灯
+";
+CM_ SG_ 2566849004 DDCM_RKECommand "遥控钥匙指令
+";
+CM_ SG_ 2566849004 DDCM_DoorSt "主驾侧门状态信号
+";
+CM_ SG_ 2566889506 RCM_NMUserData "OSEK NM user data
+";
+CM_ SG_ 2566889506 RCM_NMAlive "OSEK NM Alive
+";
+CM_ SG_ 2566889506 RCM_NMRing "OSEK NM Ring
+";
+CM_ SG_ 2566889506 RCM_NMLimphome "OSEK NM Limphome
+";
+CM_ SG_ 2566889506 RCM_NMSleepInd "OSEK NM Sleep Indication
+";
+CM_ SG_ 2566889506 RCM_NMSleepAck "OSEK NM Sleep Acknowledge
+";
+CM_ SG_ 2566889506 RCM_NMDestAddr "OSEK NM destination address
+";
+CM_ SG_ 2566835490 RCM_TrailerCheckStatus "挂车在位信号
+";
+CM_ SG_ 2566835490 RCM_Anti_theftWarn "燃油被盗信号
+";
+CM_ SG_ 2566835490 RCM_AuxiliaryFuelLevelSt "副油箱燃油液位传感器信号
+";
+CM_ SG_ 2566835490 RCM_MainFuelLevelSt "主油箱燃油液位传感器信号
+";
+CM_ SG_ 2566835490 RCM_RRTurnLampSt "主车右后转向灯状态信号
+";
+CM_ SG_ 2566835490 RCM_RLTurnLampSt "主车左后转向灯状态信号
+";
+CM_ SG_ 2566835490 RCM_TrailerRTurnLampSt "挂车右转向灯状态信号
+";
+CM_ SG_ 2566835490 RCM_TrailerLTurnLampSt "挂车左转向灯状态信号
+";
+CM_ SG_ 2566889501 PS_NMUserData "OSEK NM user data
+";
+CM_ SG_ 2566889501 PS_NMAlive "OSEK NM Alive
+";
+CM_ SG_ 2566889501 PS_NMRing "OSEK NM Ring
+";
+CM_ SG_ 2566889501 PS_NMLimphome "OSEK NM Limphome
+";
+CM_ SG_ 2566889501 PS_NMSleepInd "OSEK NM Sleep Indication
+";
+CM_ SG_ 2566889501 PS_NMSleepAck "OSEK NM Sleep Acknowledge
+";
+CM_ SG_ 2566889501 PS_NMDestAddr "OSEK NM destination address
+";
+CM_ SG_ 2566901277 PS_RKECommand "遥控钥匙指令
+";
+CM_ SG_ 2566901277 PS_KeyOutsideWarning "钥匙不在车内报警
+";
+CM_ SG_ 2566901277 PS_PowerMode "点火钥匙档位
+";
+CM_ SG_ 2566889505 BCM_NMUserData "OSEK NM user data
+";
+CM_ SG_ 2566889505 BCM_NMAlive "OSEK NM Alive
+";
+CM_ SG_ 2566889505 BCM_NMRing "OSEK NM Ring
+";
+CM_ SG_ 2566889505 BCM_NMLimphome "OSEK NM Limphome
+";
+CM_ SG_ 2566889505 BCM_NMSleepInd "OSEK NM Sleep Indication
+";
+CM_ SG_ 2566889505 BCM_NMSleepAck "OSEK NM Sleep Acknowledge
+";
+CM_ SG_ 2566889505 BCM_NMDestAddr "OSEK NM destination address
+";
+CM_ SG_ 2566803745 BCM_ACC_Usage_Demand "巡航使用要求
+";
+CM_ SG_ 2566803745 BCM_Requested_ACC_Distance_Mode "巡航距离模式
+";
+CM_ SG_ 2566905121 BCM_BatVtg3 "BCM输出B+电3电压
+0x0~0xC8:0-40v
+0xC8~0xFF:not available";
+CM_ SG_ 2566905121 BCM_BatVtg2 "BCM输出B+电2电压
+0x0~0xC8:0-40v
+0xC8~0xFF:not available";
+CM_ SG_ 2566905121 BCM_BatVtg1 "BCM输出B+电1电压
+0x0~0xC8:0-40v
+0xC8~0xFF:not available";
+CM_ SG_ 2566905121 BCM_KL30St "30电状态
+";
+CM_ SG_ 2566905121 BCM_RearPositionLampCmd "后位置灯控制指令
+";
+CM_ SG_ 2566905121 BCM_FindCar "寻车照明时间反馈
+";
+CM_ SG_ 2566905121 BCM_FollowMeHome "伴我回家时间反馈
+";
+CM_ SG_ 2566905121 BCM_High_WiperRelaySt "雨刮高速继电器状态
+";
+CM_ SG_ 2566905121 BCM_Low_WiperRelaySt "雨刮低速继电器状态
+";
+CM_ SG_ 2566905121 BCM_WashmotorSt "洗涤电机状态
+";
+CM_ SG_ 2566905121 BCM_SunroofMotorSt "天窗电机状态
+";
+CM_ SG_ 2566905121 BCM_AirHornSolenoidvalveSt "气喇叭电磁阀状态
+";
+CM_ SG_ 2566905121 BCM_KlaxonRelaySt "电喇叭继电器状态
+";
+CM_ SG_ 2566905121 BCM_LowVoltageProtectiveRelaySt "低压保护继电器状态
+";
+CM_ SG_ 2566905121 BCM_WiperSwDelayed2 "雨刮间歇二档时间反馈
+";
+CM_ SG_ 2566905121 BCM_WiperSwDelayed1 "雨刮间歇一档时间反馈
+";
+CM_ SG_ 2566901025 BCM_Sleeper_SRMSw "卧铺天窗开关信号
+";
+CM_ SG_ 2566901025 BCM_FloodlightSw "照明灯开关
+";
+CM_ SG_ 2566901025 BCM_RemoteSpeedPedalEnable "远程油门开关状态
+";
+CM_ SG_ 2566901025 BCM_PassReadingLampSw "副驾侧阅读灯开关状态
+";
+CM_ SG_ 2566901025 BCM_DriverReadingLampSw "主驾侧阅读灯开关状态
+";
+CM_ SG_ 2566901025 BCM_RightDayLineLamp "右昼行灯状态信号
+";
+CM_ SG_ 2566901025 BCM_ToolboxLampSw "工具箱灯开关信号
+";
+CM_ SG_ 2566901025 BCM_FuelTankChangeSw "主副油箱切换开关
+";
+CM_ SG_ 2566901025 BCM_Sleeper_KeyOffLampSwitch "卧铺一键关灯开关
+";
+CM_ SG_ 2566901025 BCM_SleepLampSwitch "睡眠灯开关
+";
+CM_ SG_ 2566901025 BCM_RLS_WiperCMD "RLS雨刮控制命令信号
+";
+CM_ SG_ 2566901025 BCM_WithDoorSwitch "随门开关
+";
+CM_ SG_ 2566901025 BCM_RLS_LampSwitch "RLS大灯开启信号
+";
+CM_ SG_ 2566901025 BCM_WasherSwitch "洗涤开关
+";
+CM_ SG_ 2566901025 BCM_HornSwitch "喇叭开关信号
+";
+CM_ SG_ 2566901025 BCM_ParkingPTOSwitch "驻车取力开关
+";
+CM_ SG_ 2566901025 BCM_DrivingPTOSwitch "行车取力开关
+";
+CM_ SG_ 2566901025 BCM_AxleDifferentialLockSwitch "轴间差速锁开关信号
+";
+CM_ SG_ 2566901025 BCM_WheelDifferentialLockSwitch "轮间差速锁开关信号
+";
+CM_ SG_ 2566901025 BCM_Brake_Switch "刹车开关状态
+";
+CM_ SG_ 2566901025 BCM_Clutch_Switch "离合开关状态
+";
+CM_ SG_ 2566901025 BCM_RTurnLampFlash "右转向灯闪烁控制信号-RCM
+";
+CM_ SG_ 2566901025 BCM_LTurnLampFlash "左转向灯闪烁控制信号-RCM
+";
+CM_ SG_ 2566901025 BCM_RFrontFogLampSt "右前雾灯状态信号
+";
+CM_ SG_ 2566901025 BCM_LFrontFogLampSt "左前雾灯状态信号
+";
+CM_ SG_ 2566901025 BCM_HighBeamSt "远光灯状态信号
+";
+CM_ SG_ 2566901025 BCM_LowBeamSt "近光灯状态信号
+";
+CM_ SG_ 2566901025 BCM_FrontPositionLampSt "前位置灯状态信号
+";
+CM_ SG_ 2566901025 BCM_FRTurnLampSt "主车右前转向灯状态信号
+";
+CM_ SG_ 2566901025 BCM_FLTurnLampSt "主车左前转向灯状态信号
+";
+CM_ SG_ 2566901025 BCM_RearFogLampSw "后雾灯开关信号
+";
+CM_ SG_ 2566901025 BCM_FrontFogLampSw "前雾灯开关信号
+";
+CM_ SG_ 2566901025 BCM_FlashLampSw "超车灯开关信号
+";
+CM_ SG_ 2566901025 BCM_WorkLampSw "工作灯开关信号
+";
+CM_ SG_ 2566901025 BCM_HeadLamp_AUTO "AUTO档信号
+";
+CM_ SG_ 2566901025 BCM_PositionLampSw "位置灯开关信号
+";
+CM_ SG_ 2566901025 BCM_WiperParkSw "雨刮回位信号
+";
+CM_ SG_ 2566901025 BCM_LeftDayLineLamp "左昼行灯状态信号
+";
+CM_ SG_ 2566901025 BCM_Cab_SRMSw "驾驶室天窗开关信号
+";
+CM_ SG_ 2566901025 BCM_HornSelectorSwitch "喇叭切换开关信号
+";
+CM_ SG_ 2566901025 BCM_PowerMode "点火钥匙档位
+";
+CM_ SG_ 2566901025 BCM_RLSFault "雨量传感器故障
+";
+CM_ SG_ 2566769953 BCM_WiperSw "雨刮开关信号
+";
+CM_ SG_ 2365443105 BCM_Low_BeamSwitch "近光灯开关信号
+";
+CM_ SG_ 2365443105 BCM_OperatorsDesiredBacklight "背光调节命令信号
+";
+CM_ SG_ 2365443105 BCM_TurnSignalSwitch "转向灯开关信号
+";
+CM_ SG_ 2365443105 BCM_HazardLightSwitch "危险警报灯开关信号
+";
+CM_ SG_ 2365443105 BCM_High_BeamSwitch "远光灯开关信号
+";
+CM_ SG_ 2561271841 BCM_LDW_Switch "LDW开关信号
+";
+CM_ SG_ 2349541921 BCM_AEBS_checksum "校验和
+";
+CM_ SG_ 2349541921 BCM_AEBS_counter "循环计数器
+";
+CM_ SG_ 2349541921 BCM_AEBS_Switch "AEBS开关信号
+";
+BA_DEF_ SG_  "GenSigStartValue" FLOAT 0 100000000000;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 100000;
+BA_DEF_ SG_  "NWM-WakeupAllowed" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","NotUsed","NotUsed","NotUsed","NotUsed","Cyclic","NotUsed","IfActive","NoMsgSendType","NotUsed","vector_leerstring";
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 999999;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 50000;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 50000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "NmMessage" ENUM  "no","yes";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 65535;
+BA_DEF_ BU_  "NmStationAddress" INT 0 63;
+BA_DEF_ BU_  "NmNode" ENUM  "no","yes";
+BA_DEF_  "NmBaseAddress" HEX 1024 1087;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "NWM-WakeupAllowed" "";
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "NmMessage" "no";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "NmNode" "no";
+BA_DEF_DEF_  "NmBaseAddress" 1024;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_ "NodeLayerModules" BU_ BCM "CANoeILNLVector.dll";
+BA_ "NodeLayerModules" BU_ GW_BD "CANoeILNLVector.dll";
+BA_ "NodeLayerModules" BU_ PDCM "CANoeILNLVector.dll";
+BA_ "NodeLayerModules" BU_ RCM "CANoeILNLVector.dll";
+BA_ "NmStationAddress" BU_ PS 0;
+BA_ "NodeLayerModules" BU_ PS "CANoeILNLVector.dll";
+BA_ "NmStationAddress" BU_ DDCM 0;
+BA_ "NodeLayerModules" BU_ DDCM "CANoeILNLVector.dll";
+BA_ "GenMsgSendType" BO_ 2564432378 7;
+BA_ "GenMsgSendType" BO_ 2566912242 7;
+BA_ "GenMsgSendType" BO_ 2566889509 0;
+BA_ "GenMsgCycleTime" BO_ 2566889509 100;
+BA_ "GenMsgSendType" BO_ 2566840343 0;
+BA_ "GenMsgCycleTime" BO_ 2566840343 100;
+BA_ "GenMsgSendType" BO_ 2566876183 7;
+BA_ "GenMsgSendType" BO_ 2365484270 0;
+BA_ "GenMsgCycleTime" BO_ 2365484270 50;
+BA_ "GenMsgSendType" BO_ 2566876402 7;
+BA_ "GenMsgSendType" BO_ 2566877415 0;
+BA_ "GenMsgCycleTime" BO_ 2566877415 100;
+BA_ "GenMsgSendType" BO_ 2364550954 0;
+BA_ "GenMsgCycleTime" BO_ 2364550954 50;
+BA_ "GenMsgSendType" BO_ 2364539904 0;
+BA_ "GenMsgCycleTime" BO_ 2364539904 10;
+BA_ "GenMsgSendType" BO_ 2566889709 0;
+BA_ "GenMsgCycleTime" BO_ 2566889709 100;
+BA_ "GenMsgSendType" BO_ 2566849261 0;
+BA_ "GenMsgCycleTime" BO_ 2566849261 100;
+BA_ "GenMsgSendType" BO_ 2566889708 0;
+BA_ "GenMsgCycleTime" BO_ 2566889708 100;
+BA_ "GenMsgSendType" BO_ 2566849004 0;
+BA_ "GenMsgCycleTime" BO_ 2566849004 20;
+BA_ "GenMsgSendType" BO_ 2566889506 0;
+BA_ "GenMsgCycleTime" BO_ 2566889506 100;
+BA_ "GenMsgCycleTime" BO_ 2566835490 100;
+BA_ "GenMsgSendType" BO_ 2566835490 0;
+BA_ "GenMsgCycleTime" BO_ 2566889501 100;
+BA_ "GenMsgSendType" BO_ 2566889501 0;
+BA_ "GenMsgCycleTime" BO_ 2566901277 100;
+BA_ "GenMsgSendType" BO_ 2566901277 0;
+BA_ "GenMsgCycleTime" BO_ 2566889505 100;
+BA_ "GenMsgSendType" BO_ 2566889505 0;
+BA_ "GenMsgCycleTime" BO_ 2566803745 250;
+BA_ "GenMsgSendType" BO_ 2566803745 0;
+BA_ "GenMsgCycleTime" BO_ 2566905121 100;
+BA_ "GenMsgSendType" BO_ 2566905121 0;
+BA_ "GenMsgCycleTime" BO_ 2566901025 20;
+BA_ "GenMsgSendType" BO_ 2566901025 0;
+BA_ "GenMsgCycleTime" BO_ 2566769953 200;
+BA_ "GenMsgSendType" BO_ 2566769953 0;
+BA_ "GenMsgCycleTime" BO_ 2365443105 200;
+BA_ "GenMsgSendType" BO_ 2365443105 0;
+BA_ "GenMsgCycleTime" BO_ 2561271841 200;
+BA_ "GenMsgSendType" BO_ 2561271841 0;
+BA_ "GenMsgCycleTime" BO_ 2349541921 50;
+BA_ "GenMsgSendType" BO_ 2349541921 0;
+BA_ "GenSigSendType" SG_ 2349541921 BCM_AEBS_counter 0;
+VAL_ 2566912242 MMI_VOICE_SeatrVentilation 7 "Reserved" 6 "Reserved" 5 "Level4" 4 "Level3" 3 "Level2" 2 "Level1" 1 "OFF" 0 "None" ;
+VAL_ 2566912242 MMI_VOICE_SeatrHeat 7 "Reserved" 6 "Reserved" 5 "Level4" 4 "Level3" 3 "Level2" 2 "Level1" 1 "OFF" 0 "None" ;
+VAL_ 2566912242 MMI_VOICE_Cab_SRMSw 3 "Reserved" 2 "Close" 1 "Open" 0 "None" ;
+VAL_ 2566912242 MMI_VOICE_Washmotor 3 "Reserved" 2 "OFF" 1 "ON" 0 "None" ;
+VAL_ 2566912242 MMI_VOICE_WiperSw 7 "Reserved" 6 "Reserved" 5 "Delayed2" 4 "Delayed1" 3 "High" 2 "Low" 1 "OFF" 0 "None" ;
+VAL_ 2566912242 MMI_VOICE_Sleeper_KeyOffLamp 3 "Reserved" 2 "OFF" 1 "ON" 0 "None" ;
+VAL_ 2566912242 MMI_VOICE_Floodlight 3 "Description for the value '0x3'" 2 "OFF" 1 "ON" 0 "None" ;
+VAL_ 2566912242 MMI_VOICE_DriverReadingLamp 3 "Reserved" 2 "OFF" 1 "ON" 0 "None" ;
+VAL_ 2566912242 MMI_VOICE_SleepLamp 3 "Reserved" 2 "OFF" 1 "ON" 0 "None" ;
+VAL_ 2566912242 MMI_VOICE_FRTurnLamp 3 "Reserved" 2 "OFF" 1 "ON" 0 "None" ;
+VAL_ 2566912242 MMI_VOICE_FLTurnLamp 3 "Reserved" 2 "OFF" 1 "ON" 0 "None" ;
+VAL_ 2566912242 MMI_VOICE_RearFogLamp 3 "Reserved" 2 "OFF" 1 "ON" 0 "None" ;
+VAL_ 2566912242 MMI_VOICE_FrontFogLamp 3 "Reserved" 2 "OFF" 1 "ON" 0 "None" ;
+VAL_ 2566912242 MMI_VOICE_High_Beam 3 "Reserved" 2 "OFF" 1 "ON" 0 "None" ;
+VAL_ 2566912242 MMI_VOICE_Low_Beam 3 "Reserved" 2 "OFF" 1 "ON" 0 "None" ;
+VAL_ 2566912242 MMI_VOICE_PositionLamp 3 "Reserved" 2 "OFF" 1 "ON" 0 "None" ;
+VAL_ 2566876183 IC_FindCar 7 "Off" 3 "90s" 2 "60s" 1 "30s" 0 "Not Set" ;
+VAL_ 2566876183 IC_FollowMeHome 7 "Off" 3 "90s" 2 "60s" 1 "30s" 0 "Not Set" ;
+VAL_ 2566876183 IC_WiperSwDelayed2 3 "7s" 2 "5s" 1 "3s" 0 "Not Set" ;
+VAL_ 2566876183 IC_WiperSwDelayed1 3 "9s" 2 "7s" 1 "5s" 0 "Not Set" ;
+VAL_ 2566876402 MMI_FindCar 7 "Off" 3 "90s" 2 "60s" 1 "30s" 0 "Not Set" ;
+VAL_ 2566876402 MMI_FollowMeHome 7 "Off" 3 "90s" 2 "60s" 1 "30s" 0 "Not Set" ;
+VAL_ 2566876402 MMI_WiperSwDelayed2 3 "7s" 2 "5s" 1 "3s" 0 "Not Set" ;
+VAL_ 2566876402 MMI_WiperSwDelayed1 3 "9s" 2 "7s" 1 "5s" 0 "Not Set" ;
+VAL_ 2566877415 DFMS_EyesClosedAlarm 1 "Warning" 0 "No Warning" ;
+VAL_ 2566877415 DFMS_DimissionAlarm 1 "Warning" 0 "No Warning" ;
+VAL_ 2566877415 DFMS_SmokingAlarm 1 "Warning" 0 "No Warning" ;
+VAL_ 2566877415 DFMS_CallPhoneAlarm 1 "Warning" 0 "No Warning" ;
+VAL_ 2566877415 DFMS_DistractionAlarm 1 "Warning" 0 "No Warning" ;
+VAL_ 2566877415 DFMS_YawnedAlarm 1 "Warning" 0 "No Warning" ;
+VAL_ 2364550954 FLR_Advanced_emergency_braking 15 "not available / not installed" 14 "error indication" 7 "emergency braking active" 6 "collision warning with braking" 5 "collision warning active" 4 "driver overrides system" 3 "system is ready" 2 "system deactivated by driver" 1 "system temporarily not available" 0 "system is not ready" ;
+VAL_ 2566849261 PDCM_PassReadingLampSw 1 "ON" 0 "OFF" ;
+VAL_ 2566849261 PDCM_DoorSt 1 "Open" 0 "Closed" ;
+VAL_ 2566849004 DDCM_Anti_thief_Warning 1 "Warning" 0 "No Warning" ;
+VAL_ 2566849004 DDCM_SearchCar 1 "Search" 0 "None" ;
+VAL_ 2566849004 DDCM_LockLamp 2 "Unlock Lamp" 1 "Lock Lamp" 0 "None" ;
+VAL_ 2566849004 DDCM_RKECommand 3 "Reserved" 2 "Unlock Press  (遥控解锁)" 1 "Lock Press  (遥控闭锁)" 0 "None" ;
+VAL_ 2566849004 DDCM_DoorSt 1 "Open" 0 "Closed" ;
+VAL_ 2566835490 RCM_TrailerCheckStatus 1 "Trailer" 0 "No Trailer" ;
+VAL_ 2566835490 RCM_Anti_theftWarn 1 "Warning" 0 "No Warning" ;
+VAL_ 2566835490 RCM_AuxiliaryFuelLevelSt 28 "180" 27 "170" 26 "165" 25 "160" 24 "155" 23 "150" 22 "140" 21 "130" 20 "125" 19 "120" 18 "115" 255 "Not Available" 34 "阻值过高故障" 33 "阻值过低故障" 17 "110" 16 "105" 15 "100" 14 "94.5" 13 "88.5" 12 "82.5" 11 "77.5" 10 "72.5" 9 "66.5" 8 "55" 7 "47" 6 "42" 5 "36" 4 "29.8" 3 "23" 2 "16.2" 1 "10" 0 "Initial" ;
+VAL_ 2566835490 RCM_MainFuelLevelSt 28 "180" 27 "170" 26 "165" 25 "160" 24 "155" 23 "150" 22 "140" 21 "130" 20 "125" 19 "120" 18 "115" 255 "Not Available" 34 "阻值过高故障" 33 "阻值过低故障" 17 "110" 16 "105" 15 "100" 14 "94.5" 13 "88.5" 12 "82.5" 11 "77.5" 10 "72.5" 9 "66.5" 8 "55" 7 "47" 6 "42" 5 "36" 4 "29.8" 3 "23" 2 "16.2" 1 "10" 0 "Initial" ;
+VAL_ 2566835490 RCM_RRTurnLampSt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_ 2566835490 RCM_RLTurnLampSt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_ 2566835490 RCM_TrailerRTurnLampSt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_ 2566835490 RCM_TrailerLTurnLampSt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_ 2566901277 PS_RKECommand 15 "Reserved" 14 "Reserved" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "Reserved" 6 "WindowStop（车窗停止运动)" 5 "WindowDown（遥控降窗)" 4 "WindowUp  (遥控升窗)" 3 "Search Press  (远程寻车)" 2 "Unlock Press  (遥控解锁)" 1 "Lock Press  (遥控闭锁)" 0 "None" ;
+VAL_ 2566901277 PS_KeyOutsideWarning 1 "Warning" 0 "No Warning" ;
+VAL_ 2566901277 PS_PowerMode 4 "START" 3 "ON" 2 "ACC" 1 "OFF" 0 "None" ;
+VAL_ 2566803745 BCM_ACC_Usage_Demand 3 "Not Available" 2 "Error Indicator" 1 "using ACC distance control" 0 "not using ACC distance control" ;
+VAL_ 2566803745 BCM_Requested_ACC_Distance_Mode 7 "Not Available" 6 "Error Indicator" 5 "Not Defined" 4 "Requested ACC Distance Mode #5" 3 "Requested ACC Distance Mode #4" 2 "Requested ACC Distance Mode #3" 1 "Requested ACC Distance Mode #2" 0 "Requested ACC Distance Mode #1" ;
+VAL_ 2566905121 BCM_KL30St 1 "Valid" 0 "Invalid" ;
+VAL_ 2566905121 BCM_RearPositionLampCmd 1 "on" 0 "off" ;
+VAL_ 2566905121 BCM_FindCar 7 "Off" 3 "90s" 2 "60s" 1 "30s" 0 "None" ;
+VAL_ 2566905121 BCM_FollowMeHome 7 "Off" 3 "90s" 2 "60s" 1 "30s" 0 "None" ;
+VAL_ 2566905121 BCM_High_WiperRelaySt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_ 2566905121 BCM_Low_WiperRelaySt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_ 2566905121 BCM_WashmotorSt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_ 2566905121 BCM_SunroofMotorSt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_ 2566905121 BCM_AirHornSolenoidvalveSt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_ 2566905121 BCM_KlaxonRelaySt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_ 2566905121 BCM_LowVoltageProtectiveRelaySt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_ 2566905121 BCM_WiperSwDelayed2 3 "7s" 2 "5s" 1 "3s（默认值）" 0 "None" ;
+VAL_ 2566905121 BCM_WiperSwDelayed1 3 "9s" 2 "7s" 1 "5s（默认值）" 0 "None" ;
+VAL_ 2566901025 BCM_Sleeper_SRMSw 3 "Reserved" 2 "Close" 1 "Open" 0 "Inactive" ;
+VAL_ 2566901025 BCM_FloodlightSw 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_RemoteSpeedPedalEnable 3 "not available" 2 "not available" 1 "active" 0 "Inactive" ;
+VAL_ 2566901025 BCM_PassReadingLampSw 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_DriverReadingLampSw 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_RightDayLineLamp 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_ToolboxLampSw 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_FuelTankChangeSw 1 "Auxiliary FuelTank" 0 "Main FuelTank" ;
+VAL_ 2566901025 BCM_Sleeper_KeyOffLampSwitch 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_SleepLampSwitch 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_RLS_WiperCMD 3 "Fault" 2 "High" 1 "Low" 0 "None" ;
+VAL_ 2566901025 BCM_WithDoorSwitch 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_RLS_LampSwitch 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_WasherSwitch 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_HornSwitch 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_ParkingPTOSwitch 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_DrivingPTOSwitch 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_AxleDifferentialLockSwitch 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_WheelDifferentialLockSwitch 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_Brake_Switch 3 "Not Available" 2 "Error" 1 "Brake pedal depressed" 0 "Brake pedal released" ;
+VAL_ 2566901025 BCM_Clutch_Switch 3 "Clutch switch status" 2 "Error" 1 "Clutch actuated" 0 "Clutch  not actuated" ;
+VAL_ 2566901025 BCM_RTurnLampFlash 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_LTurnLampFlash 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_RFrontFogLampSt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_LFrontFogLampSt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_HighBeamSt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_LowBeamSt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_FrontPositionLampSt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_FRTurnLampSt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_FLTurnLampSt 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_RearFogLampSw 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_FrontFogLampSw 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_FlashLampSw 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_WorkLampSw 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_HeadLamp_AUTO 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_PositionLampSw 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_WiperParkSw 1 "Invalid" 0 "Valid" ;
+VAL_ 2566901025 BCM_LeftDayLineLamp 3 "Reserved" 2 "Fault" 1 "On" 0 "Off" ;
+VAL_ 2566901025 BCM_Cab_SRMSw 3 "Reserved" 2 "Close" 1 "Open" 0 "Inactive" ;
+VAL_ 2566901025 BCM_HornSelectorSwitch 1 "气喇叭" 0 "电喇叭" ;
+VAL_ 2566901025 BCM_PowerMode 4 "START" 3 "ON" 2 "ACC" 1 "OFF" 0 "None" ;
+VAL_ 2566901025 BCM_RLSFault 1 "Fault" 0 "No Fault" ;
+VAL_ 2566769953 BCM_WiperSw 15 "Not available" 5 "Delayed2" 4 "Delayed1" 3 "High" 2 "Reserved" 1 "Low" 0 "Off" ;
+VAL_ 2365443105 BCM_Low_BeamSwitch 3 "Not available" 2 "Error" 1 "Low Beam active" 0 "Low Beam inactive" ;
+VAL_ 2365443105 BCM_TurnSignalSwitch 15 "Not available" 14 "Error" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "Reserved" 3 "Reserved" 2 "Right turn to be Flashing" 1 "Left Turn to be Flashing" 0 "No Turn being signaled" ;
+VAL_ 2365443105 BCM_HazardLightSwitch 3 "Not available" 2 "Error" 1 "Hazard Lamps to be Flashing" 0 "Hazard Lamps to be Off" ;
+VAL_ 2365443105 BCM_High_BeamSwitch 3 "Not available" 2 "Error" 1 "High Beam active" 0 "High Beam inactive" ;
+VAL_ 2561271841 BCM_LDW_Switch 3 "Not care" 2 "Error" 1 "Enable Lane Departure Warning" 0 "Disable Lane Departure Warning" ;
+VAL_ 2349541921 BCM_AEBS_Switch 3 "Not care" 2 "Error" 1 "not deactivation of system" 0 "deactivation of system" ;
